@@ -1,0 +1,292 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'Cerebri Sans';
+    src: url('./fontStyle/CerebriSans.ttf') format('truetype')
+}
+
+.container {
+    padding: 0px 28px 0px 28px;
+    position: relative;
+}
+
+.nav {
+    display: flex;
+    flex-direction: row;
+    padding-top: 15px;
+    align-items: center;
+    /* position: fixed;
+    top: 0; */
+}
+
+.profile {
+    width: 40px;
+}
+
+.profile img {
+    width: 100%;
+}
+
+.greeting {
+    margin-left: 10px;
+}
+
+.greeting h3 {
+    font-family: 'PT Serif';
+    font-weight: lighter;
+}
+
+.divisions {
+    display: flex;
+    flex-direction: column;
+    /* padding-top: 75px; */
+    margin-top: 25px;
+}
+
+.first {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.schedule h2 {
+    font-family: 'PT Serif';
+    font-size: 28px;
+}
+
+.reconfigure {
+    padding: 5px 13px 5px 13px;
+    border-radius: 13px;
+    border: 1px solid #FF9D00;
+    box-shadow: 1px 1px 32px rgba(0, 0, 0, 0.04);
+}
+
+.reconfigure:focus {
+    outline: none;
+}
+
+.second,
+.third {
+    margin-top: 24px;
+    display: flex;
+    height: 64px;
+}
+
+.account,
+.view {
+    flex-grow: 1;
+    border-radius: 6px 0px 0px 6px;
+    padding: 12px 15px 12px 15px;
+}
+
+.account p {
+    font-family: 'Cerebri Sans';
+    font-size: 14px;
+}
+
+.pay,
+.check {
+    padding: 11px 15px 16px 16px;
+    border-radius: 0px 6px 6px 0px;
+    border: none;
+    font-size: 14px;
+    max-width: 115px;
+    width: 100%;
+    font-family: 'Cerebri Sans';
+}
+
+.limit {
+    text-decoration: line-through;
+}
+
+.third {
+    margin-top: 20px !important;
+}
+
+.fourth {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+.get {
+    margin: 20px 0px 0px 20px;
+}
+
+.get h3 {
+    font-family: 'PT Serif';
+}
+
+.answer {
+    margin: 5px 0px 0px 20px;
+}
+
+.answer p {
+    font-family: 'Cerebri Sans';
+    font-weight: lighter;
+    font-size: 14px;
+}
+
+.call {
+    margin-top: 30px;
+    display: flex;
+    /* align-items: center; */
+    justify-content: space-between;
+    margin-bottom: 32px;
+}
+
+.contact {
+    margin-left: 35px;
+}
+
+.caller,
+.play {
+    width: 40px;
+    border-radius: 50%;
+    height: 40px;
+    box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.1);
+}
+
+.phone {
+    margin: 11px 1.61px 11.67px 10.94px;
+}
+
+.video {
+    margin-right: 32px;
+}
+
+.pause {
+    margin: 13.14px 15px 11px 12.86px;
+}
+
+.set {
+    margin-top: 10px;
+    width: 109px;
+    line-height: 20px;
+    height: 40px;
+}
+
+.set p {
+    font-size: 14px;
+    font-family: 'Cerebri Sans';
+}
+
+.lose {
+    width: 107px !important;
+}
+
+.do {
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.it {
+    width: 31px;
+    height: 20px;
+}
+
+.it p,
+.vid p {
+    font-family: 'Cerebri Sans';
+    font-size: 14px;
+}
+
+.line,
+.line2 {
+    border: 1px solid #8A5CFF;
+    width: 31px;
+    height: 1px;
+    margin-top: 5px;
+}
+
+.line2 {
+    border: 1px solid #FF682A;
+}
+
+.arrow1,
+.arrow2 {
+    margin-left: 7px;
+}
+
+.arrow2 img {
+    width: 14px;
+}
+
+.next {
+    margin-top: 30px;
+}
+
+.next h2 {
+    font-family: 'PT Serif';
+    font-weight: lighter;
+}
+
+.time {
+    margin-top: 16px;
+    display: flex;
+    align-items: center;
+    padding-bottom: 70px;
+}
+
+.exact {
+    padding: 24px 10px 25px 0px;
+}
+
+.exact p {
+    font-size: 12px;
+    font-family: 'Cerebri Sans';
+}
+
+.chore {
+    padding: 13px 0px 13px 15px;
+    border-radius: 10px;
+    flex-grow: 1;
+}
+
+.chore p {
+    width: 241px;
+    height: 38px;
+    line-height: 19px;
+    font-size: 15px;
+    font-family: 'Cerebri Sans';
+}
+
+.bottom {
+    position: relative;
+}
+
+.foot {
+    position: fixed;
+    bottom: 0;
+    background-color: rgba(244, 244, 244, 0.75);
+    padding: 10px 30.5px 20px 30px;
+    height: 74px;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.calendar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* .dar img {
+    width: 100%;
+} */
+
+.dule {
+    margin-top: 2px;
+}
+
+.dule p {
+    font-size: 12px;
+    font-family: 'Cerebri Sans';
+    font-weight: lighter;
+}

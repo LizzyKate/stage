@@ -1,0 +1,80 @@
+.container {
+    background-color: #F9FFFB;
+}
+
+.greeting h3,
+.schedule h2,
+.get h3,
+.chore p {
+    color: #121212;
+}
+
+.reconfigure {
+    background: #ff9d000f;
+    color: #FF9D00;
+}
+
+.account,
+.fourth,
+.chore {
+    background-color: #CFECFF;
+}
+
+.pay {
+    background-color: #00C267;
+}
+
+.account p,
+.view p {
+    color: #1B1B1B;
+}
+
+.pay p,
+.check p {
+    color: #FFF;
+}
+
+.view {
+    background-color: #F9F5E1;
+}
+
+.check {
+    background-color: #FFBE56;
+}
+
+.answer p,
+.set p {
+    color: #383838;
+}
+
+.caller {
+    background-color: rgba(190, 164, 255, 0.7);
+}
+
+.play {
+    background-color: rgba(255, 146, 101, 0.7);
+}
+
+.it p {
+    color: #8A5CFF;
+}
+
+.arrow1 {
+    color: #8A5CFF;
+}
+
+.vid p {
+    color: #FF682A;
+}
+
+.next h2 {
+    color: #00C267;
+}
+
+.exact p {
+    color: #333
+}
+
+.dule p {
+    color: #303030;
+}
