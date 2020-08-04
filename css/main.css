@@ -302,7 +302,13 @@ button:focus {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background: black;
+    position: fixed;
+    width: 100vw;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.9);
+    z-index: 55;
 }
 
 
@@ -345,6 +351,7 @@ button:focus {
 
 .cancel {
     padding: 31px 45px 31px 45px;
+    border: none;
 }
 
 .menu {
@@ -383,4 +390,50 @@ button:focus {
     font-family: 'Cerebri Sans';
 }
 
+.display-none {
+    display: none;
+    transition: all ease-in 0.5s;
+}
+
+.display-show {
+    display: flex;
+    transition: all ease-in 0.5s;
+}
+
 /* fixed top-0 right-0 w-screen h-screen flex items-center justify-center bg-gray-600 bg-opacity-75 z-20 */
+
+.back {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    height: 100vh;
+    overflow: hidden;
+    width: 100vw;
+    left: 0;
+    bottom: 0;
+}
+
+.front {
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 1;
+    right: 0;
+    z-index: 20;
+    overflow: hidden;
+}
+
+.front img {
+    max-width: 374px;
+    width: 100%;
+}
+
+.order2:first-of-type {
+    margin-top: 0 !important;
+}
