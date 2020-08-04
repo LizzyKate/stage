@@ -24,7 +24,7 @@ export const openModalButton = () => {
 export const openImageModal = (e, i) => {
     let menu = document.querySelector('.menu')
 
-    if(e.target?.src?.length){
+    // if(e.target.parentElement.classList.contains("order2")){
         const div = document.createElement("div")
         div.classList.add('back')
         
@@ -37,7 +37,7 @@ export const openImageModal = (e, i) => {
         }else{
             div.innerHTML = `
             <div class="front">
-                <img src="${e.target.src}" alt="">
+                <img src="${data[i].image}" alt="">
             </div>`
         }
         
@@ -48,7 +48,7 @@ export const openImageModal = (e, i) => {
                 div.style.display = 'none'
             }
         })
-    }
+    // }
 }
 
 // data structure
