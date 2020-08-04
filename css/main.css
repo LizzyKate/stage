@@ -3,6 +3,11 @@
     box-sizing: border-box;
 }
 
+button:focus {
+    outline: none;
+    cursor: pointer;
+}
+
 @font-face {
     font-family: 'Cerebri Sans';
     src: url('./fontStyle/CerebriSans.ttf') format('truetype')
@@ -233,8 +238,7 @@
 .time {
     margin-top: 1rem;
     display: flex;
-    align-items: center;
-    /* padding-bottom: 70px; */
+    align-items: center
 }
 
 .exact {
@@ -280,11 +284,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    cursor: pointer;
 }
-
-/* .dar img {
-    width: 100%;
-} */
 
 .dule {
     margin-top: 0.125rem;
@@ -295,3 +296,91 @@
     font-family: 'Cerebri Sans';
     font-weight: lighter;
 }
+
+.modal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: black;
+}
+
+
+
+.hold {
+    background: white;
+    padding-bottom: 53px;
+    border-radius: 20px 20px 0 0;
+    overflow: hidden;
+}
+
+.content {
+    /* padding-left: 30px; */
+}
+
+.today {
+    display: flex;
+    border-radius: 20px 20px 0px 0px;
+    /* margin-left: 30px;
+    margin-top: 30px; */
+
+}
+
+.meal_container {
+    width: 100%;
+    max-width: 700px;
+    margin: auto;
+    position: fixed;
+    bottom: 0px;
+}
+
+.meal {
+    padding-top: 30px;
+    padding-bottom: 31px;
+    padding-left: 30px;
+    width: 100%;
+    font-family: 'PT Serif';
+    font-weight: bold;
+}
+
+.cancel {
+    padding: 31px 45px 31px 45px;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    padding-left: 30px;
+    margin-top: 30px;
+    overflow-y: scroll;
+    height: 60vh;
+    overflow-x: hidden;
+}
+
+.order,
+.order2 {
+    display: flex;
+    align-items: center;
+}
+
+.order2 {
+    margin-top: 25px;
+}
+
+.choose {
+    margin-left: 20px;
+}
+
+.choose h3 {
+    font-family: 'Cerebri Sans';
+    font-weight: lighter;
+    margin-bottom: 10px;
+}
+
+.choose p {
+    font-size: 15px;
+    font-weight: lighter;
+    font-family: 'Cerebri Sans';
+}
+
+/* fixed top-0 right-0 w-screen h-screen flex items-center justify-center bg-gray-600 bg-opacity-75 z-20 */

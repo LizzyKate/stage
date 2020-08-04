@@ -78,3 +78,21 @@
 .dule p {
     color: #303030;
 }
+
+
+.meal {
+    background-color: #F9F5E1;
+    color: #121212;
+}
+
+.cancel {
+    background-color: #FFBE56;
+}
+
+.choose h3 {
+    color: #303030;
+}
+
+.choose p {
+    color: #6C6C6C;
+}
