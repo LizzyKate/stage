@@ -12,6 +12,7 @@ import Img8 from "../img/Group 5.png"
 // close modal
 export const closeModalButton = () => {
     modal.classList.replace("display-show","display-none")
+    
 }
 
 // open modal
@@ -20,17 +21,26 @@ export const openModalButton = () => {
 }
 
 // open openImageModal
-export const openImageModal = (e) => {
+export const openImageModal = (e, i) => {
     let menu = document.querySelector('.menu')
 
     if(e.target?.src?.length){
         const div = document.createElement("div")
         div.classList.add('back')
-        div.innerHTML = `
-        <div class="front">
-            <img src="${img7}" alt="">
-        </div>
-        `
+        
+        if( i === 0 ){
+            div.innerHTML = `
+            <div class="front">
+                <img src="${img7}" alt="">
+            </div>
+            `
+        }else{
+            div.innerHTML = `
+            <div class="front">
+                <img src="${e.target.src}" alt="">
+            </div>`
+        }
+        
         menu.appendChild(div)
 
         div.addEventListener("click", e => {

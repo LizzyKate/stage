@@ -1,7 +1,7 @@
 // import functions from app.js
 import {closeModalButton, openModalButton, openImageModal, data} from "./app"
 
-// create an empty array of images
+// hold an empty array of images
 const images = []
 
 // event listener to close modal
@@ -36,6 +36,6 @@ const mountImages = () => {
     mountImages();
 
     // event listener to open openImageModal
-    images.forEach(e => e.addEventListener("click", openImageModal))
+    images.forEach((e, i) => e.addEventListener("click", a => openImageModal(a, i)))
 
 
