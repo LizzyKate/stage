@@ -6,78 +6,76 @@ import Img4 from "../img/Group_9.png"
 import Img5 from "../img/Group 10.png"
 import img7 from "../img/Group_7.png"
 import Img8 from "../img/Group 5.png"
+import { TimelineLite, Power2} from 'gsap'
 
+export function openImageModal  (f, i)  {
 
-// close modal
-export const closeModalButton = () => {
-        modal.classList.remove("fade-in")
-        modal.children[0].classList.remove('scale-up-ver-center')
-        
-        modal.classList.add('fade-out')
-        modal.children[0].classList.add('scale-down-ver-center')
-    // modal.classList.toggle('scale-in-ver-top')
-    // modal.classList.toggle('scale-out-ver-top')
-    // // modal.classList.replace("display-show")
-    setTimeout(() => {
-        modal.classList.add("display-none")
-    }, 500)
-}
+    console.log(f)
 
-// open modal
-export const openModalButton = () => {
-    modal.classList.remove('fade-out')
-    modal.children[0].classList.remove('scale-down-ver-center')
-    modal.classList.remove("display-none")
-    modal.classList.add("fade-in")
-    modal.children[0].classList.add('scale-up-ver-center')
-}
+    const tl = new TimelineLite({paused: true})
 
-// open openImageModal
-export const openImageModal = (e, i) => {
-    let menu = document.querySelector('.menu')
+    
+    let menu = document.querySelector('.modal')
 
     
 
         const div = document.createElement("div")
         div.classList.add('back')
         
-        // if( i === 0 ){
+        if( i === 0 ){
             div.innerHTML = `
-            <div class="front fade-in">
-                <img src="${img7}"  class="scale-in-modal">
+            <div class="front">
+                <img src="${img7}"  >
             </div>
             `
-        // }else{
-        //     div.innerHTML = `
-        //     <div class="front fade-in">
-        //         <img src="${data[i].image}"  class='scale-in-modal'>
-        //     </div>`
-        // }
+        }else{
+            div.innerHTML = `
+            <div class="front">
+                <img src="${data[i].image}" >
+            </div>`
+        }
 
         menu.appendChild(div)
 
+        tl.to('.back', 0.2 ,{
+            opacity:1
+        }, '-=0.3').
+        fromTo( '.back img', 0.5, {
+            opacity:0,
+            transform:'scale(0.5)'
+        }, {
+            ease:Power2.easeIn,
+            opacity:1,
+            transform:'scale(1)'
+        })
+
+        tl.play()
+
         div.addEventListener("click", e => {
+            const tl2 = new TimelineLite({paused: true})
             
             if(!e.target?.src ){
-                e.target.children[0].classList.toggle('scale-in-modal')
-                e.target.children[0].classList.toggle('scale-out-modal')
-                // div.classList.toggle('fade-in')
-                
-                // div.classList.toggle('fade-out')
-                e.target.classList.toggle('fade-in')  
-                  
-                e.target.classList.toggle('fade-out') 
-                e.target.classList.toggle('front')
-                setTimeout(()=> {
-                    div.classList.toggle('back')
-                    div.style.display = 'none'
-                }, 1000)
+
+                tl2.fromTo( '.front', 0.5 , {
+                    opacity:1,
+                    transform:'scale(1)'
+                    
+                }, {
+                    ease:Power2.easeOut,
+                    opacity:0,
+                    transform:'scale(0.3)'
+                }).to('.back', 0.2 ,{
+                    opacity:0
+                }, '-=0.4').to('.back', 0 , {
+                    display:'none'
+                })
+        
+                tl2.play()
                   
             }
         })
 }
 
-// data structure
 export const data = [
     {
         title:"Akara and Pap",

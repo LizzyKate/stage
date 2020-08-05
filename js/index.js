@@ -1,16 +1,72 @@
-// import functions from app.js
-import {closeModalButton, openModalButton, openImageModal, data} from "./app"
+import { openImageModal, data} from "./app"
+import { TimelineLite, Power2} from 'gsap'
 
-// hold an empty array of images
+
 const images = []
 
-// event listener to close modal
-document.querySelector("#close-list").addEventListener("click", closeModalButton)
+document.querySelector("#close-list").addEventListener("click", ()=> {
+    const tl = new TimelineLite({paused: true})
 
-// event listener to open modal
-document.querySelector(".check").addEventListener("click", openModalButton)
+    tl
+    .to('.modal', 1, {
+        opacity:0,
+        ease:Power2.easeIn
+    })
+    .to('.third', 0.8 , {
+        transform:'scale(1)',
+        ease: Power2.easeIn,
+        opacity:1,
+        height:0,
+        display:'flex'
+    }, "-=0.6")
+    .fromTo('.meal_container', 1, {
+        transform:'scaleY(1)',
+        transformOrigin:'80% 0',
+        height:'auto',
+        bottom:'0'
+    }, {
+        bottom:'76px',
+        transform:'scaleY(0.4)',
+        transformOrigin:'80% 0',
+        height:'200px'
+    },  "-=0.6")
+    .to('.modal', 0, {
+        display:'none'
+    })
 
-// Loop through the data then create an element that will contain each data object
+    tl.play()
+})
+
+document.querySelector(".check").addEventListener("click",()=> {
+    const tl = new TimelineLite({paused: true})
+    tl.to('.third', 0.8 , {
+        transform:'scale(1.11)',
+        ease: Power2.easeIn,
+        opacity:0,
+        height:'200px'
+    })
+    .to('.modal', 1, {
+        display:'flex',
+        opacity:1,
+        ease:Power2.easeIn
+    }, "-=0.6")
+    .fromTo('.meal_container', 1, {
+        transform:'scaleY(.4)',
+        transformOrigin:'80% 0',
+        height:'500px'
+    }, {
+        bottom:'0',
+        transform:'scaleY(1)',
+        transformOrigin:'80% 0',
+        height:'auto'
+    },  "-=0.6").
+    to('third', 0 , {
+        display:'none'
+    })
+
+    tl.play()
+})
+
 const mountImages = () => {
     let menu = document.querySelector('.menu')
     
@@ -31,11 +87,8 @@ const mountImages = () => {
     })
     console.log(images)
 }
-
-// call mountImages() to loop through the data object and mount on the DOM
     mountImages();
 
-    // event listener to open openImageModal
     images.forEach((e, i) => e.addEventListener("click", a => openImageModal(a, i)))
 
 
