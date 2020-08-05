@@ -2,7 +2,9 @@
     margin: 0;
     box-sizing: border-box;
 }
-
+body{
+    overflow-x: hidden;
+}
 button:focus {
     outline: none;
     cursor: pointer;
@@ -367,15 +369,13 @@ button:focus {
     overflow-x: hidden;
 }
 
-.order,
 .order2 {
     display: flex;
     align-items: center;
-}
-
-.order2 {
+    cursor: pointer;
     margin-top: 25px;
 }
+
 
 .choose {
     margin-left: 20px;
