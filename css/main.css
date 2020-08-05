@@ -391,7 +391,7 @@ button:focus {
 }
 
 .display-none {
-    display: none;
+    display: none !important;
     transition: all ease-in 0.5s;
 }
 

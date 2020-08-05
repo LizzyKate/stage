@@ -1,39 +1,33 @@
-.scale-in-top {
-    animation: scale-in-top 1s ease-in both;
-    transition: all;
+.scale-up-ver-center {
+    animation: scale-up-ver-center .4s cubic-bezier(.39, .575, .565, 1.000) both
 }
 
-@keyframes scale-in-top {
-    0% {
-        transform: scaleY(0.5);
-        width: 100%;
-        opacity: 0;
-    }
 
-    25% {
-        transform: translateY(0%);
-        width: 100%;
-        opacity: 0;
+@keyframes scale-up-ver-center {
+    0% {
+        transform: scaleY(.4)
     }
 
     100% {
-        opacity: 1;
+        transform: scaleY(1)
     }
 }
 
 
 
-.fade-in {
-    animation: fade-in 1s cubic-bezier(.25, .46, .45, .94) both;
+.scale-down-ver-center {
+    animation: scale-down-ver-center .4s cubic-bezier(.25, .46, .45, .94) both
 }
 
-@keyframes fade-in {
+@keyframes scale-down-ver-center {
     0% {
-        opacity: 0;
+        transform: scaleY(1);
+        opacity: 1;
     }
 
     100% {
-        opacity: 1;
+        transform: scaleY(.3);
+        opacity: 0;
     }
 }
 
@@ -41,37 +35,55 @@
 
 
 
-.scale-out-top {
-    animation: scale-out-top .5s cubic-bezier(.55, .085, .68, .53) both
+
+
+
+.scale-out-ver-top {
+    animation: scale-out-ver-top .4s cubic-bezier(.55, .085, .68, .53) both
 }
 
-@keyframes scale-out-top {
+
+@keyframes scale-out-ver-top {
     0% {
-        transform: scale(1);
-        transform-origin: 50% 0;
+        transform: scaleY(1);
+        transform-origin: 70% 0;
         opacity: 1
     }
 
     100% {
-        transform: scale(0);
-        transform-origin: 50% 0;
-        opacity: 1
+        transform: scaleY(0);
+        transform-origin: 70% 0;
+        opacity: 0.4
     }
 }
 
 
+.scale-in-ver-top {
+    animation: scale-in-ver-top .4s cubic-bezier(.25, .46, .45, .94) both
+}
 
+@keyframes scale-in-ver-top {
+    0% {
+        transform: scaleY(0);
+        transform-origin: 100% 0;
+        opacity: 1
+    }
 
-
+    100% {
+        transform: scaleY(1);
+        transform-origin: 100% 0;
+        opacity: 1
+    }
+}
 
 .scale-in-modal {
-    animation: scale-in-modal .5s cubic-bezier(.25, .46, .45, .94) both;
-    /* transform-origin: 10% 50%; */
+    animation: scale-in-modal .4s cubic-bezier(.25, .46, .45, .94) both;
+    transform-origin: left;
 }
 
 @keyframes scale-in-modal {
     0% {
-        transform: scale(0);
+        transform: scale(0.3);
         opacity: 1;
     }
 
@@ -82,7 +94,8 @@
 }
 
 .scale-out-modal {
-    animation: scale-out-modal .5s cubic-bezier(.25, .46, .45, .94) both
+    animation: scale-out-modal .4s linear;
+    transform-origin: 10% 70%;
 }
 
 @keyframes scale-out-modal {
@@ -92,8 +105,39 @@
         opacity: 1;
     }
 
+
     100% {
-        transform: scale(0);
+        transform: scale(0.3);
         opacity: 1;
+    }
+}
+
+
+.fade-out {
+    animation: fade-out .4s ease-out;
+}
+
+@keyframes fade-out {
+    0% {
+        opacity: 1
+    }
+
+    100% {
+        opacity: 0 !important;
+    }
+}
+
+
+.fade-in {
+    animation: fade-in .4s ease-out;
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0
+    }
+
+    100% {
+        opacity: 1 !important;
     }
 }
